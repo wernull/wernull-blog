@@ -3,7 +3,7 @@ layout: post
 title: "Leaving the Country made me a better web developer"
 date: 2013-06-03 19:54:54 -0400
 comments: true
-categories:
+categories: web rambling
 ---
 
 After spending a short time where English is not the primary language, I have learned first hand the importance of proper translation. There have been many times when I was translating a website that I did not put much thought into how those random arrangement of characters fit into the place they were suppose to go. However, I have now seen what it looks like for translations to be an after thought. The problem is not that the message is broken, but that it gives off a bad impression and sometimes can be interpreted as offensive or insensitive.

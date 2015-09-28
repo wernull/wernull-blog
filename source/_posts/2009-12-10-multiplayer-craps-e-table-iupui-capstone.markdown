@@ -3,7 +3,7 @@ layout: post
 title: "Multiplayer Craps E-Table IUPUI Capstone"
 date: 2009-12-10 20:45:22 -0400
 comments: true
-categories:
+categories: flash
 ---
 
 This project was version three of a line of craps applications I developed throughout my college career. The first being a craps calculator that graphed strategies. The second being a single player craps game with 3D dice; and the final being a multiplayer game designed for use with a 42″ touchscreen.
