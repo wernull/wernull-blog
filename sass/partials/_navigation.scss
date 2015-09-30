@@ -1,14 +1,19 @@
 body > nav {
   position: relative;
-  background-color: $nav-bg;
   text-align: center;
-  border: {
-    top: 1px solid $nav-border-top;
-    bottom: 1px solid $nav-border-bottom; }
   padding-top: .35em;
   padding-bottom: .35em;
   padding-left: 5px;
   padding-right: 5px;
+  @media only screen and (min-width: 550px) {
+    border: {
+      top: 1px solid $nav-border-top; }
+  }
+  @media only screen and (min-width: 768px) {
+    padding-top: 1.25em;
+    border: {
+      top: none; }
+  }
   form {
     padding-top: .05em;
     @include background-clip(padding-box);

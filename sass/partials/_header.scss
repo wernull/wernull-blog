@@ -1,11 +1,15 @@
 body > header {
   background: $header-bg;
   h1 {
+    float: right;
     display: inline-block;
     margin: 0;
     a, a:visited, a:hover {
       color: $title-color;
       text-decoration: none;
+    }
+    @media only screen and (min-width: 550px) {
+      float: none;
     }
   }
   h2 {

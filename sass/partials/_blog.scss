@@ -1,8 +1,5 @@
 article {
   padding-top: 2.3em;
-  a { @extend .force-wrap;
-    &, &:visited, &:active, &:hover { text-decoration: none; }
-  }
   header {
     position: relative;
     padding-top: 2em;
@@ -55,7 +52,7 @@ article {
   img {
     min-width: 100%;
   }
-  @media only screen and (min-width: 540px) {
+  @media only screen and (min-width: 550px) {
     img {
       min-width: 0;
     }
@@ -145,7 +142,7 @@ article + article {
   border-bottom: dotted 1px #D1D1D1;
   a {
     text-decoration: none;
-    color: $text-color-light;
+    color: $link-color;
     &.prev { position: absolute; left: 0; }
     &.next { position: absolute; right: 0; }
     &:hover { color: $link-color-hover; }

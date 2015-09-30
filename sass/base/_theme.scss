@@ -1,7 +1,7 @@
 $img-border: inline-image('dotted-border.png');
 
 // Main Link Colors
-$link-color: #195ea2 !default;
+$link-color: #718191 !default;
 $link-color-hover: adjust-color($link-color, $lightness: 10, $saturation: 25) !default;
 $link-color-visited: adjust-color($link-color, $saturation: -20, $lightness: -4) !default;
 $link-color-active: adjust-color($link-color-hover, $lightness: -15) !default;
@@ -13,13 +13,13 @@ $article-border: #eeeeee !default;
 
 $header-bg: #fff !default;
 $header-border: lighten($header-bg, 15) !default;
-$title-color: #777777 !default;
+$title-color: #414d59 !default;
 $subtitle-color: lighten($title-color, 25) !default;
 
 // Main Text Colors
 $subheader-color: lighten($title-color, 5) !default;
-$text-color: #222 !default;
-$text-color-light: lighten($text-color, 60) !default;
+$text-color: #414d59 !default;
+$text-color-light: lighten($text-color, 30) !default;
 $type-border: #ddd !default;
 
 /* Navigation */
@@ -74,11 +74,10 @@ html {
   overflow-y: scroll;
 }
 body {
+  background: $page-bg;
   > div {
-    background: $page-bg;
     border-bottom: 0;
     > div {
-      background: $page-bg;
       border-right: 0;
     }
   }
