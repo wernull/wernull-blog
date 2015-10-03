@@ -25,13 +25,13 @@
   <meta name="twitter:description" content="{{ twcontent | truncate: 67 }}" />
   <meta name="twitter:image" content="http://wernull.com/images/profile.jpg" />
 
-  {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
+  {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}/{% else %}{{ page.url | remove:'index.html' }}{% endif %}{% endcapture %}
 
   <!-- Facebook -->
   <meta property="og:title" content="wernull">
   <meta property="og:type" content="blog">
   <meta property="og:url" content="{{ canonical }}">
-  {% capture fbImage %}{% if page.image %}{{ page.image }}{% else %}http://wernull.com/images/default_post.png{% endif %}{% endcapture %}
+  {% capture fbImage %}{% if page.image %}{{ page.image }}{% else %}http://wernull.com/images/default_post.jpg{% endif %}{% endcapture %}
   <meta property="og:image" content="{{ fbImage }}" />
   <meta property="og:site_name" content="wernull">
   <meta property="fb:admins" content="100001444981549">
