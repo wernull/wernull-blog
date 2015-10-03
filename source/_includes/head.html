@@ -4,7 +4,8 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>{% if page.title %}{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %} - {% endif %}{{ site.title }}</title>
+  {% capture pageTitle %}{% if page.title %}{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %} - {% endif %}{{ site.title }}{% endcapture %}
+  <title>{{ pageTitle }}</title>
   <meta name="author" content="{{ site.author }}">
 
   {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
@@ -28,8 +29,9 @@
   {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}/{% else %}{{ page.url | remove:'index.html' }}{% endif %}{% endcapture %}
 
   <!-- Facebook -->
-  <meta property="og:title" content="wernull">
+  <meta property="og:title" content="{{ pageTitle }}">
   <meta property="og:type" content="blog">
+  <meta property="og:author" content="{{ site.author }}">
   <meta property="og:url" content="{{ canonical }}">
   {% capture fbImage %}{% if page.image %}{{ page.image }}{% else %}http://wernull.com/images/default_post.jpg{% endif %}{% endcapture %}
   <meta property="og:image" content="{{ fbImage }}" />
