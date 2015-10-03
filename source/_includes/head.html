@@ -25,6 +25,17 @@
   <meta name="twitter:description" content="{{ twcontent | truncate: 67 }}" />
   <meta name="twitter:image" content="http://wernull.com/images/profile.jpg" />
 
+  <!-- Facebook -->
+  <meta property="og:title" content="wernull">
+  <meta property="og:type" content="blog">
+  <meta property="og:url" content="{{ canonical }}">
+  {% capture fbImage %}{% if page.image %}{{ page.image }}{% else %}/images/default_post.png{% endif %}{% endcapture %}
+  <meta property="og:image" content="{{ fbImage }}" />
+  <meta property="og:site_name" content="wernull">
+  <meta property="fb:admins" content="100001444981549">
+  <meta property="fb:app_id" content="341840842586653">
+  <meta property="og:description" content="{{ twtitle | truncate: 140 }}" />
+
   {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
   <link rel="canonical" href="{{ canonical }}">
   <link href="{{ root_url }}/favicon.png" rel="icon">
