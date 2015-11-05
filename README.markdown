@@ -3,3 +3,4 @@
 ### Quick links
 
 ```rake new_post['title']```
+
