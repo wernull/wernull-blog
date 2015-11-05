@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+=======
+>>>>>>>
 ## Personal blog for Kyle Werner
 
 ### Quick links
