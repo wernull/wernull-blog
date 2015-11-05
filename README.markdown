@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 =======
->>>>>>>
+>>>>>>> test-conflict
 ## Personal blog for Kyle Werner
 
 ### Quick links
