@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem 'rake', '~> 10.4'
+gem 'rake', '~> 10.4.2'
 gem 'jekyll', '~> 2.0'
 gem 'octopress-hooks', '~> 2.2'
 gem 'octopress-date-format', '~> 2.0'
