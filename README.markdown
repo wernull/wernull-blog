@@ -1,4 +1,7 @@
-## Personal blog for Kyle Werner
+## Personal blog
+
+### Run development
+`bundle exec jekyll serve --watch`
 
 ### Quick links
 
