@@ -4,10 +4,12 @@ title: "About"
 footer: true
 ---
 
-{% img left /images/profile.jpg 260px 260px Kyle Werner %}
+{% img left /images/guitar_profile.jpg 260px 260px Kyle Werner %}
 
-I’m a Developer.
+I’m a Senior Engineer at [Lessonly](https://lessonly.com).
 
-Why do I prefer this single word over many of the labels flying around these days? Because the current state of our industry requires constant adaptation. In the past I could have been labeled a Flash Developer, today I might be called a Web Developer and tomorrow… only time will tell. The people who matter will know exactly what I do from this one word and those who don’t will think I’m in real estate.
+In the past I have been labeled a flash developer, a front end developer, a back end developer, a web developer, a supervisor and tomorrow… only time will tell.
 
-View my experience on [Linkedin](https://linkedin.com/in/{{ site.linkedin_user }}), see my code on [Github](https://github.com/{{ site.github_user }}) and follow me on [Twitter](https://twitter.com/{{ site.twitter_user }}).
+View my experience on [Linkedin](https://linkedin.com/in/{{ site.linkedin_user }}), see my code on [Github](https://github.com/{{ site.github_user }}) and follow me on [Twitter](https://twitter.com/{{ site.twitter_user }})
+
+If you like vintage style tube guitar amps, check out my [Instagram](https://instagram.com/wernull)
