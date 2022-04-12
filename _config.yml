@@ -59,21 +59,20 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # ----------------------- #
 
 # Github repositories
-github_user: wernull
-github_repo_count: 4
-github_show_profile_link: true
-github_skip_forks: true
+# github_user: wernull
+# github_repo_count: 4
+# github_show_profile_link: true
+# github_skip_forks: true
 
 # Twitter
-twitter_user: wernull
+# twitter_user: wernull
 instagram_user: wernull
 
-linkedin_user: wernull
-stackoverflow_user_id: 2653693
+# linkedin_user: wernull
+# stackoverflow_user_id: 2653693
 
 # Google Analytics
-google_analytics_tracking_id: "UA-21865581-1"
+google_analytics_tracking_id: "G-H0WG6R9HD2"
 
 # Facebook Like
 facebook_like: false
-
