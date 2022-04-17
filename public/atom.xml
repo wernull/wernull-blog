@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[wernull]]></title>
+  <link href="http://localhost:4000/atom.xml" rel="self"/>
+  <link href="http://localhost:4000/"/>
+  <updated>2022-04-17T15:53:28-05:00</updated>
+  <id>http://localhost:4000/</id>
+  <author>
+    <name><![CDATA[Kyle Werner]]></name>
+    <email><![CDATA[contact@wernull.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Moving on from tech blogging]]></title>
+    <link href="http://localhost:4000/2019/01/oh-yea/"/>
+    <updated>2019-01-15T19:40:27-06:00</updated>
+    <id>http://localhost:4000/2019/01/oh-yea</id>
+    <content type="html"><![CDATA[<p>The past few years I’ve been focusing most of my free time off of the computer. Before I got into programming I was repairing guitars and amplifiers so when I realized the laptop had to be closed to prevent burnout, I decided to get into building tube amplifiers. After two plus years I’m feeling proud of the things I build offline and plan to focus more attention there.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Goodbye Fantasy Bots]]></title>
+    <link href="http://localhost:4000/2016/09/goodbye-fantasy-bots/"/>
+    <updated>2016-09-27T21:41:42-05:00</updated>
+    <id>http://localhost:4000/2016/09/goodbye-fantasy-bots</id>
+    <content type="html"><![CDATA[<p>After two years I decided to shutter the Fantasy Bots project. Thank you to all my beta testers who provided feedback along this journey. After starting a new job this spring the project was no longer a priority for me. It was humming along for a while but recently Yahoo! made some changes that prevented users from logging into the site. With fantasy baseball coming to an end, I decided this was as good of time as any to pull the plug.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Coffee Machine has WIFI Part II]]></title>
+    <link href="http://localhost:4000/2016/02/the-coffee-machine-has-wifi-part-ii/"/>
+    <updated>2016-02-09T17:06:10-06:00</updated>
+    <id>http://localhost:4000/2016/02/the-coffee-machine-has-wifi-part-ii</id>
+    <content type="html"><![CDATA[<p>After taking some time off from this experiment, some co-workers brought it back up and pushed me to keep trying. My prior attempt at finding a user manual failed so this time I took detailed pictures of the inside components and tried to find further information on how it works. Also with this further investigation I noticed a compact flash card inserted at the bottom of the main circuit board.</p>
+
+<p>The first thing I did was research any model numbers found inside the unit. One of the identifiers on the main board led me to a user manual that also had information on the application that runs everything. Inside this manual was the default password for logging into the admin panel, could it be that easy… yes, yes it was. After digging around in the settings I found where to connect the machine to our WIFI, which means all my effort looking on the network last time was for nothing.</p>
+
+<p>After further noodling with the admin side of the software, I turned to the compact flash card. The card was unreadable on OSX and Windows but after connecting it to a Linux virtual machine I was able to copy over all the contents. In an effort to keep myself from being the most hated person in the office by breaking the coffee machine, I ordered an identical compact flash card to experiment on.</p>
+
+<p>In a perfect world, I would have been able to create an image of the CF card that could both be used for imaging the new card and also loading in a VM to test modifications on. Unfortunately, I was never able to get the machine to boot from this card. I believe there is something I missed in order to make it a bootable card. A co-worker mentioned some software that would clone the card but I never made it that far.</p>
+
+<p>During a casual conversation about this I mention my fear of breaking the machine because of how much usage I saw in the log files. This sparked the interest of Ryan who took the logs files and created an API that could query the data. The idea is to create some sort of data visualization about coffee drinkers in the office. There is also the idea floating around to combine the coffee machine data with data from the bathroom door sensor that Alex installed. Please feel free to send us title suggestions for this combined data viz.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Getting Started with the Yahoo! Fantasy Sports API]]></title>
+    <link href="http://localhost:4000/2016/01/getting-started-with-the-yahoo-fantasy-sports-api/"/>
+    <updated>2016-01-01T19:35:47-06:00</updated>
+    <id>http://localhost:4000/2016/01/getting-started-with-the-yahoo-fantasy-sports-api</id>
+    <content type="html"><![CDATA[<p>When I first started building my <a href="http://fantasybots.com">fantasybots.com</a> service, there were many hurdles I ran across while learning to work with the Yahoo! Sports API. First off, the documentation is horrible and has actually gotten worse over the years. Also, it appears community relations with independent developers were abandoned back in 2010. The following are some tips on getting setup using Node and Express.</p>
+
+<h2 id="setting-up-yahoo-app">Setting up Yahoo! app</h2>
+<p>Go to <a href="https://developer.yahoo.com/apps/create/">https://developer.yahoo.com/apps/create/</a> and create an app. The callback domain says optional but will need to be set for the way we will be doing authentication. This callback domain needs to be a domain you control and can be used for both development and production. Under API Permissions check the Fantasy Sports box and then click the create app button. This will give you the two OAuth keys needed for the next section.</p>
+
+<h2 id="communicating-with-the-api">Communicating with the API</h2>
+<p>While you could setup your own OAuth, I went with a library that took care of most of that along with making the API easier to work with. There are a few out there but I went with <a href="https://github.com/jcreamer898/fantasy-sports">fantasy-sports</a>. The documentation on GitHub is straight forward with plenty of code examples.</p>
+
+<p>This library is setup for using the token stored in a browser cookie but I have had no problems storing the token on the back-end for automated request when the user is not on the site.</p>
+
+<p>The API allows you to request JSON but it is very apparent that XML is the primary format. The returned JSON is very messy and overly complicated. Also, if you ever need to POST back to the API it only accepts XML.</p>
+
+<h2 id="local-development">Local development</h2>
+<p>Unfortunately, Yahoo! doesn’t allow you to set the callback domain to a localhost address, but it does allow you to use any subdomain of the url set. In order to have a development workflow that did not require pushing changes to a staging server, what I did was use <a href="https://ngrok.com/">ngrok</a>. This is an amazing service that I use almost every day at home and work. If you pay for the service, they will allow you to setup your custom domain to tunnel traffic to your localhost environment <a href="https://ngrok.com/docs#custom-domains">https://ngrok.com/docs#custom-domains</a>. Once all that is setup then local development is a breeze.</p>
+
+<h2 id="the-data">The Data</h2>
+<p>Be careful when working with the JSON returned from the API. It appears to just be a conversion of XML:</p>
+<pre><code>{
+  players: {
+    0: {
+        player: [
+            [{
+                    player_key: "346.p.8851"
+                }, {
+                    player_id: "8851"
+                }, {
+                    name: {
+                        full: "Devin Mesoraco",
+                        first: "Devin",
+                        last: "Mesoraco",
+                        ascii_first: "Devin",
+                        ascii_last: "Mesoraco"
+                    }
+                }, {
+                    status: "DL"
+                }, {
+                    on_disabled_list: "1"
+                }, {
+                    editorial_player_key: "mlb.p.8851"
+                }, {
+                    editorial_team_key: "mlb.t.17"
+                }, {
+                    editorial_team_full_name: "Cincinnati Reds"
+                }, {
+                    editorial_team_abbr: "Cin"
+                }, {
+                    uniform_number: "39"
+                }, {
+                    display_position: "C"
+                }, {
+                    headshot: {
+                        url: "http://l.yimg.com/iu/api/res/1.2/6lZ3W5sQgW6GvYDqstn64Q--/YXBwaWQ9c2hhcmVkO2NoPTIzMzY7Y3I9MTtjdz0xNzkwO2R4PTg1NztkeT0wO2ZpPXVsY3JvcDtoPTYwO3E9MTAwO3c9NDY-/https://s.yimg.com/xe/i/us/sp/v/mlb_cutout/players_l/20150406/8851.png",
+                        size: "small"
+                    },
+                    image_url: "http://l.yimg.com/iu/api/res/1.2/6lZ3W5sQgW6GvYDqstn64Q--/YXBwaWQ9c2hhcmVkO2NoPTIzMzY7Y3I9MTtjdz0xNzkwO2R4PTg1NztkeT0wO2ZpPXVsY3JvcDtoPTYwO3E9MTAwO3c9NDY-/https://s.yimg.com/xe/i/us/sp/v/mlb_cutout/players_l/20150406/8851.png"
+                }, {
+                    is_undroppable: "0"
+                }, {
+                    position_type: "B"
+                }, {
+                    eligible_positions: [{
+                        position: "C"
+                    }, {
+                        position: "Util"
+                    }, {
+                        position: "DL"
+                    }]
+                },
+                [],
+                []
+            ]
+        ]
+    }
+</code></pre>
+<p>Here is where a library like <a href="https://lodash.com/">lodash</a> will come in handy. Also, a huge mistake I did was assume that an object in an array would always be in the same position. For example, <code>{ display_position: "C" }</code> in the above JSON is at <code>players['0'].player[0][10]</code>, however, if that player was no on the “DL” then the <code>{ status: "DL" }</code> is left out and display_position then becomes <code>players['0'].player[0][9]</code>. So what you have to do is either loop through the player[0] array or use lodash to find the object by property.</p>
+
+<p>There are many things I have encountered in my two years of working with this API. Feel free to reach out if you have any questions.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Coffee Machine has WIFI?]]></title>
+    <link href="http://localhost:4000/2015/12/the-coffee-machine-has-wifi/"/>
+    <updated>2015-12-04T19:35:47-06:00</updated>
+    <id>http://localhost:4000/2015/12/the-coffee-machine-has-wifi</id>
+    <content type="html"><![CDATA[<p>One day a new shiny office coffee machine showed up. Unlike the previous one, this machine had a large touchscreen instead of buttons. Of course, the first time I try to use it it locks up and says “trash full.” After tracking down the office manager, I watched her open the front, press a small button on the inside, enable the settings screen and that is when I saw a small WIFI icon in the bottom corner. This was the first time I thought about messing with it, but I didn’t have the time or any specific reason.</p>
+
+<p>Fast forward a few months and I run into <a href="https://www.jitbit.com/alexblog/249-now-thats-what-i-call-a-hacker/">this wonderful article about automation</a> and I now have a reason. How sweet would it be to initiate a cup of coffee from my desk then have it ready after walking across the office and up the stairs. However, our machine does not provide the cup. That means I either have to tackle anyone who tries to get in my way to chat or I have it wait after brewing and program a button to dispense. But that’s a problem that can be worried about once the experiment is successful.</p>
+
+<p>After discussing this with a coworker, I decided to try and find the machine on our local network. Keep in mind I’m not a network guy and have never done anything like this before, but they make it look like so much fun on TV. He pointed me to a tool called NMAP and I started learning how to use it. In the meantime, he simply walked upstairs, opened the machine’s settings, and tried to find the IP address that way. Unfortunately, that section of the menu was password protected.</p>
+
+<p>I decided to keep working on the network side and ran a scan of every IP in the network. A small part of me was afraid of receiving a call from the IT department, but I guess that didn’t trigger any warnings. The results were a very large list of ip addresses and open ports. I was able to filter out most results by eliminating any machine with anti-virus software. Anything with http/https was checked out in a browser and anything with ssh was inspected through the terminal. While I was unsuccessful in actually finding or gaining access to the coffee machine, I did find my way into a few printers and the smart TV.</p>
+
+<p>The next step was to do a little research. Soon I realized trying to find user manuals was as sketchy as looking for random hardware drivers. I managed to find some promotional pdf’s and a few distributors of the machine but have yet to find any sort of service or user material. A few things that caught my eye were add on items to the product. The manufacture offers a paid service to remotely monitor your machine. Also, a credit card processor is an optional item. One would hope that these services have even the most basic of security. Perhaps thinking this wanna be hacker has any chance at cracking the machine is a bit of a stretch. Looks like this experiment will have to come down to good ol’ social engineering.</p>
+
+<p>To be continued…</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[That New Blog Smell]]></title>
+    <link href="http://localhost:4000/2015/09/that-new-blog-smell/"/>
+    <updated>2015-09-29T21:51:10-05:00</updated>
+    <id>http://localhost:4000/2015/09/that-new-blog-smell</id>
+    <content type="html"><![CDATA[<p>It’s been a few years and this blog has become stagnant. Over that time I have worked on some interesting projects both at work and on the side and decided it’s time to share some of those stories. So just like most developers out there, the first thing I did instead of actually writing was rebuild the blog onto a new platform. If you build it, the words will come.</p>
+
+<p>After a few times of the old WordPress site going down because of MySQL issues, I knew I wanted to rebuild it in something more stable. Static sites have become popular recently and I can see why. They offer performance and stability; just not a user friendly CMS for writers. However, as a developer, there are many options geared towards our crowd. I chose to use <a href="http://octopress.org/">Octopress</a> from a colleague recommendation. It runs on <a href="https://jekyllrb.com/">Jekyll</a> which we have used many times around the office for small websites. I had a feeling using Jekyll for it’s intended purpose was going to be a lot smoother, especially with a framework like Octopress to bundle commonly used modifications. And I must say, so far I am very pleased.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Leaving the Country made me a better web developer]]></title>
+    <link href="http://localhost:4000/2013/06/leaving-the-country-made-me-a-better-web-developer/"/>
+    <updated>2013-06-03T18:54:54-05:00</updated>
+    <id>http://localhost:4000/2013/06/leaving-the-country-made-me-a-better-web-developer</id>
+    <content type="html"><![CDATA[<p>After spending a short time where English is not the primary language, I have learned first hand the importance of proper translation. There have been many times when I was translating a website that I did not put much thought into how those random arrangement of characters fit into the place they were suppose to go. However, I have now seen what it looks like for translations to be an after thought. The problem is not that the message is broken, but that it gives off a bad impression and sometimes can be interpreted as offensive or insensitive.</p>
+
+<p>It’s not that this is new to me, but that I never understood how important it was until I was on the receiving end. This has given me a whole new perspective on the importance of being diligent with my localization tasks.
+Another thing I have noticed are how many things are designed without relying on text and use clever illustrations to convey the message like on road signs and exit lights. I have seen this being done using meaningful icons on websites, but I always looked at that from a design prospective and not a localization tactic.</p>
+
+<p>It feels like to me that most cultures are better at a multilingual society than the United States. This shows from their intuitive solutions to overcoming a language barrier. My time abroad has not only changed my impression of other cultures, but given me stronger awareness to the importance of my attention to detail.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[WordPress Unbranded / Simple Admin Plugin]]></title>
+    <link href="http://localhost:4000/2013/04/wordpress-unbranded-simple-admin-plugin/"/>
+    <updated>2013-04-28T18:14:22-05:00</updated>
+    <id>http://localhost:4000/2013/04/wordpress-unbranded-simple-admin-plugin</id>
+    <content type="html"><![CDATA[<p>WordPress makes a great CMS for clients on a budget. However, many of those clients don’t know and don’t need to know what WordPress is. This plugin is built to make the admin experience a little more personal for those who just need to log in and make a few copy changes.</p>
+
+<p><a href="https://github.com/wernull/WordPress-Unbranded/archive/master.zip">Download</a> / <a href="https://github.com/wernull/WordPress-Unbranded">GitHub</a></p>
+
+<p>Instructions:</p>
+
+<p>Unzip and copy the folder into your plugin directory. Activate it from the Installed Plugins page. Plugin options can be found at Settings / WP Unbranded</p>
+
+<p>Options:</p>
+
+<ul>
+  <li>Remove “Howdy”</li>
+  <li>Remove WordPress logo and link drop down from the admin bar</li>
+  <li>Replace user name drop down with just a logout button</li>
+  <li>Change login page image</li>
+  <li>Change login page image link to homepage url</li>
+  <li>Change Admin footer</li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Debug ghost CSS elements causing unwanted scrolling]]></title>
+    <link href="http://localhost:4000/2013/04/debug-ghost-css-elements-causing-unwanted-scrolling/"/>
+    <updated>2013-04-26T21:47:37-05:00</updated>
+    <id>http://localhost:4000/2013/04/debug-ghost-css-elements-causing-unwanted-scrolling</id>
+    <content type="html"><![CDATA[<p>Have you ever been working on a site and come across strange horizontal scrolling? Or perhaps you opened your site on mobile and the width does not fit. This often happens from some rogue style breaking out of the main layout. Sometimes this can be found by scanning through the html with your favorite web inspector, but often the task is like finding a needle in a haystack. I came up with this css trick to help quickly scan a page for unexpected styling.
+Place this snippet at the bottom of you css file:</p>
+<noscript><pre>400: Invalid request</pre></noscript>
+<script src="https://gist.github.com/e9456b7aba5a3f9f91a6.js"> </script>
+
+<p>To make things even easier, I created a bookmarklet that inserts this code to the bottom of any page.
+Drag this link » <a href="javascript:\(function\(\){document.body.innerHTML+=&quot;&lt;style&gt;*{background: #000 !important;color: #0f0 !important;outline: solid #f00 1px !important;}&lt;/style&gt;&quot;;}\)\(\);">Ghost CSS</a> « to your bookmarks to use anywhere… or just click and see what happens.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Custom shortlinks for your website]]></title>
+    <link href="http://localhost:4000/2013/02/custom-shortlink-for-your-website/"/>
+    <updated>2013-02-12T18:00:21-06:00</updated>
+    <id>http://localhost:4000/2013/02/custom-shortlink-for-your-website</id>
+    <content type="html"><![CDATA[<p>It’s like a vanity license plate for your website. Normally I glance over short-links without thinking nothing of them, but I came across a tweet by <a href="https://twitter.com/destroytoday">@destroytoday</a> with the url <a href="http://dstry.it/">dstry.it</a> and BOOM the brand was burned into my head. Although having a bad ass business name helps too. I also like that a personalized short-link gives the user a bit of confidence it’s safe to click.
+The hardest part to setting up a custom link system is registering a relevant domain. Two characters is almost impossible and not allowed by some top-level domains. If you’re lucky you can find a clever three or four character domain that bleeds into the TLD so it’s easy to remember and recognize.</p>
+
+<p>The easiest part is setting up the domain with <a href="http://bit.ly/">bitly</a>. While there are some free products like <a href="http://yourls.org/">yourls</a> that allow you to host your own service, they take a little more work to setup.</p>
+
+<p>Finally, if you use WordPress there a lot of nice plugins to make the process even easier. My personal favorite is <a href="http://yoast.com/wordpress/bitly-shortlinks/">bit.ly shortlink</a> by <a href="http://yoast.com/">Yoast</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[First Version of my Personal Website]]></title>
+    <link href="http://localhost:4000/2011/02/first-version-of-my-personal-website/"/>
+    <updated>2011-02-02T18:06:54-06:00</updated>
+    <id>http://localhost:4000/2011/02/first-version-of-my-personal-website</id>
+    <content type="html"><![CDATA[<p>For my personal site, I wanted to design it with a simple look, but with a powerful interactive element. The sphere is given the 3D look and feel without using any third party engines. There is an unseen 3D object with points that are tracked and applied to the visible icons. The icons are only given the x,y,z properties of the hidden object so that they do not rotate and keep a front facing perspective. In order to layout the icons in a uniformed fashion; I applied the golden section spiral principal to the dynamic construction of the sphere. When an icon is clicked, it corresponds to a specific frame in a reference movieclip that has placeholder objects laid out like the icon clicked and applies all the positions to the visible icons.</p>
+
+<p><a href="http://v2.wernull.com/kjw">Launch Flash site</a> / <a href="http://v2.wernull.com/kjw/projects/kylejwernerHomepage.zip">Download Source</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Multiplayer Craps E-Table IUPUI Capstone]]></title>
+    <link href="http://localhost:4000/2009/12/multiplayer-craps-e-table-iupui-capstone/"/>
+    <updated>2009-12-10T18:45:22-06:00</updated>
+    <id>http://localhost:4000/2009/12/multiplayer-craps-e-table-iupui-capstone</id>
+    <content type="html"><![CDATA[<p>This project was version three of a line of craps applications I developed throughout my college career. The first being a craps calculator that graphed strategies. The second being a single player craps game with 3D dice; and the final being a multiplayer game designed for use with a 42″ touchscreen.</p>
+
+<p>It was developed using Flash AS3. The user experience was designed around a single touch touchscreen being used for a multiplayer game.</p>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/dd2DNVb3CFY" frameborder="0" allowfullscreen=""></iframe>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/EZshMtivq4s" frameborder="0" allowfullscreen=""></iframe>
+]]></content>
+  </entry>
+  
+</feed>
