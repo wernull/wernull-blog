@@ -4,13 +4,12 @@
   <title><![CDATA[wernull]]></title>
   <link href="http://localhost:4000/atom.xml" rel="self"/>
   <link href="http://localhost:4000/"/>
-  <updated>2022-04-17T15:53:28-05:00</updated>
+  <updated>2022-04-17T18:08:15-05:00</updated>
   <id>http://localhost:4000/</id>
   <author>
     <name><![CDATA[Kyle Werner]]></name>
     <email><![CDATA[contact@wernull.com]]></email>
   </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
@@ -215,7 +214,7 @@ Place this snippet at the bottom of you css file:</p>
 <script src="https://gist.github.com/e9456b7aba5a3f9f91a6.js"> </script>
 
 <p>To make things even easier, I created a bookmarklet that inserts this code to the bottom of any page.
-Drag this link » <a href="javascript:\(function\(\){document.body.innerHTML+=&quot;&lt;style&gt;*{background: #000 !important;color: #0f0 !important;outline: solid #f00 1px !important;}&lt;/style&gt;&quot;;}\)\(\);">Ghost CSS</a> « to your bookmarks to use anywhere… or just click and see what happens.</p>
+Drag this link » <a href="javascript:(function(){document.body.innerHTML+=&quot;&lt;style&gt;*{background: #000 !important;color: #0f0 !important;outline: solid #f00 1px !important;}&lt;/style&gt;&quot;;})();">Ghost CSS</a> « to your bookmarks to use anywhere… or just click and see what happens.</p>
 ]]></content>
   </entry>
   
@@ -239,8 +238,6 @@ The hardest part to setting up a custom link system is registering a relevant do
     <updated>2011-02-02T18:06:54-06:00</updated>
     <id>http://localhost:4000/2011/02/first-version-of-my-personal-website</id>
     <content type="html"><![CDATA[<p>For my personal site, I wanted to design it with a simple look, but with a powerful interactive element. The sphere is given the 3D look and feel without using any third party engines. There is an unseen 3D object with points that are tracked and applied to the visible icons. The icons are only given the x,y,z properties of the hidden object so that they do not rotate and keep a front facing perspective. In order to layout the icons in a uniformed fashion; I applied the golden section spiral principal to the dynamic construction of the sphere. When an icon is clicked, it corresponds to a specific frame in a reference movieclip that has placeholder objects laid out like the icon clicked and applies all the positions to the visible icons.</p>
-
-<p><a href="http://v2.wernull.com/kjw">Launch Flash site</a> / <a href="http://v2.wernull.com/kjw/projects/kylejwernerHomepage.zip">Download Source</a></p>
 ]]></content>
   </entry>
   

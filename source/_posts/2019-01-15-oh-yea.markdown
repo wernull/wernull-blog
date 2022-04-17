@@ -3,7 +3,7 @@ layout: post
 title: "Moving on from tech blogging"
 date: 2019-01-15 20:40:27 -0500
 comments: true
-categories:
+categories: tech
 ---
 
 The past few years I've been focusing most of my free time off of the computer. Before I got into programming I was repairing guitars and amplifiers so when I realized the laptop had to be closed to prevent burnout, I decided to get into building tube amplifiers. After two plus years I'm feeling proud of the things I build offline and plan to focus more attention there. 

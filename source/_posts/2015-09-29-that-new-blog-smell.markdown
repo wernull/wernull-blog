@@ -3,7 +3,7 @@ layout: post
 title: "That New Blog Smell"
 date: 2015-09-29 22:51:10 -0400
 comments: true
-categories: web rambling
+categories: tech
 ---
 
 It's been a few years and this blog has become stagnant. Over that time I have worked on some interesting projects both at work and on the side and decided it's time to share some of those stories. So just like most developers out there, the first thing I did instead of actually writing was rebuild the blog onto a new platform. If you build it, the words will come.

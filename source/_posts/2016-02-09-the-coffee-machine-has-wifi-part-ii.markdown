@@ -3,7 +3,7 @@ layout: post
 title: "The Coffee Machine has WIFI Part II"
 date: 2016-02-09 18:06:10 -0500
 comments: true
-categories: 
+categories: tech
 ---
 After taking some time off from this experiment, some co-workers brought it back up and pushed me to keep trying. My prior attempt at finding a user manual failed so this time I took detailed pictures of the inside components and tried to find further information on how it works. Also with this further investigation I noticed a compact flash card inserted at the bottom of the main circuit board.
 

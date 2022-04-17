@@ -3,7 +3,7 @@ layout: post
 title: "The Coffee Machine has WIFI?"
 date: 2015-12-04 20:35:47 -0500
 comments: true
-categories: 
+categories: tech
 ---
 One day a new shiny office coffee machine showed up. Unlike the previous one, this machine had a large touchscreen instead of buttons. Of course, the first time I try to use it it locks up and says “trash full.” After tracking down the office manager, I watched her open the front, press a small button on the inside, enable the settings screen and that is when I saw a small WIFI icon in the bottom corner. This was the first time I thought about messing with it, but I didn’t have the time or any specific reason.
 

@@ -63,6 +63,8 @@ plugins:
 instagram_user: wernull
 twitter_user: wernull
 linkedin_user: wernull
+github_user: wernull
+github_show_profile_link: true
 stackoverflow_user_id: 2653693
 
 google_analytics_tracking_id: "G-H0WG6R9HD2"
