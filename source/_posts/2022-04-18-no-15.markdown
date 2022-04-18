@@ -30,9 +30,9 @@ The cabinet design was inspired from mid-century modern furniture. I wanted to m
 
 Many of the capacitors are vintage Aerovox that were tested to make sure they were still in spec. The tone circuit has vintage silver mica "domino" capacitors. Additional filtering was added to the rectifier to help reduce hum.
 
-The preamp tubes are vintage RCA 12au7 that were pulled from antique lab equipment. The same salvaged lav equipment provided the power switch and pilot light. 
+The preamp tubes are vintage RCA 12au7 that were pulled from antique lab equipment. The same salvaged lab equipment provided the power switch and pilot light. 
 
-One of the most time consuming parts of this project was getting my woodworking skills to the level that I invisioned for the final product. Not only did I need to practice dove tails a handful of times, I had to fashion a leg vice from parts laying around the shop. 
+One of the most time-consuming parts of this project was getting my woodworking skills to the level that I envisioned for the final product. Not only did I need to practice dove tails a handful of times, but I also had to fashion a leg vice from parts laying around the shop. 
 
 The wood is black walnut and finished with [Walrus Oil](https://walrusoil.com/) furniture finish, butter, and wax.
 
@@ -40,5 +40,5 @@ The wood is black walnut and finished with [Walrus Oil](https://walrusoil.com/) 
 {% picture thumbnail 15/IMG_6827.jpg %}
 {% picture thumbnail 15/IMG_6916.jpg %}
 
-In the end this is one of my finest amps. It sounds amazing with both a piano or a guitar.
+In the end this is one of my finest amps. It sounds amazing with both a piano and a guitar.
 
