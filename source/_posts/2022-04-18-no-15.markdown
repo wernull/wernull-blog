@@ -25,10 +25,10 @@ There were a few modifications I decided to do. First, I had in my collection a 
 The cabinet design was inspired from mid-century modern furniture. I wanted to make a box with solid wood and dove tails and to have short feet that angle out for stability. The grill cloth comes off a 1970's Leslie X77 speaker. The chassis was custom built to fit within the cabinet design and all the parts were laid out to fit around the speaker to reduce space. When I say custom built, I mean it started with a flat piece of sheet metal, bent to shape, drilled, and then powder coated. 
 
 {% picture thumbnail 15/IMG_6925.jpg 1:1 center %}
-{% picture thumbnail 15/IMG_6513.jpeg %}
-{% picture thumbnail 15/IMG_6610.jpg %}
+{% picture thumbnail 15/IMG_6513.jpeg 1:1 center %}
+{% picture thumbnail 15/IMG_6610.jpg 1:1 center %}
 
-A few notes about the inside of the amp; Many of the capacitors are vintage Aerovox that were tested to make sure they were still in spec. The tone circuit has vintage silver mica "domino" capacitors. Additional filtering was added to the rectifier to help reduce hum.
+Many of the capacitors are vintage Aerovox that were tested to make sure they were still in spec. The tone circuit has vintage silver mica "domino" capacitors. Additional filtering was added to the rectifier to help reduce hum.
 
 The preamp tubes are vintage RCA 12au7 that were pulled from antique lab equipment. The same salvaged lav equipment provided the power switch and pilot light. 
 

@@ -12,7 +12,7 @@ presets:
   # built-in.
   default:
     formats: [webp, original] # Order matters!
-    widths: [260, 400, 800, 1200, 1600] # Image widths, in pixels.
+    widths: [280, 400, 800, 1200, 1600] # Image widths, in pixels.
 
     # The sizes attribute is both important, and impossible to offer good defaults for. You need to
     # learn about it. Short version: Web browsers parse web pages line-by-line. When they run into
@@ -66,7 +66,7 @@ presets:
   # will always be the same size on all screens (icons, graphics, thumbnails, etc), but you'd like
   # to supply higher resolution images to devices with higher pixel ratios.
   thumbnail:
-    base_width: 260 # How wide the 1x image should be.
+    base_width: 280 # How wide the 1x image should be.
     pixel_ratios: [1, 1.5, 2] # Which multipliers to target.
     fallback_width: 250 # The default is 800, which is probably too big.
     formats: [webp, original]
