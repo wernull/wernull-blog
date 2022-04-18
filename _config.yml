@@ -69,6 +69,10 @@ stackoverflow_user_id: 2653693
 
 google_analytics_tracking_id: "G-H0WG6R9HD2"
 
+picture:
+  source: "assets/images/fullsize"
+  output: "assets/images/generated"
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

@@ -4,7 +4,7 @@ title: "About"
 footer: true
 ---
 
-{% img left /images/guitar_profile.jpg 260px 260px Kyle Werner %}
+{% picture thumbnail guitar_profile.jpg class="left" %}
 
 I’m a Senior Engineer at [Lessonly](https://lessonly.com).
 
