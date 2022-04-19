@@ -24,7 +24,7 @@
   <meta name="twitter:title" content="{{ twtitle | truncate: 67 }}" />
   {% capture twcontent %}{% if page.excerpt %}{{ page.excerpt | remove: '<p>' | remove: '</p>' }}{% else %}Web Developer{% endif %}{% endcapture %}
   <meta name="twitter:description" content="{{ twcontent | truncate: 67 | strip_html }}" />
-  <meta name="twitter:image" content="http://wernull.com/images/profile.jpg" />
+  <meta name="twitter:image" content="https://wernull.com/images/profile.jpg" />
 
   {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}/{% else %}{{ page.url | remove:'index.html' }}{% endif %}{% endcapture %}
 
@@ -32,7 +32,7 @@
   <meta property="og:title" content="{{ pageTitle }}">
   <meta property="og:type" content="blog">
   <meta property="og:url" content="{{ canonical }}">
-  {% capture fbImage %}{% if page.image %}{{ page.image }}{% else %}http://wernull.com/images/default_post.jpg{% endif %}{% endcapture %}
+  {% capture fbImage %}{% if page.image %}{{ page.image }}{% else %}https://wernull.com/images/default_post.jpg{% endif %}{% endcapture %}
   <meta property="og:image" content="{{ fbImage }}" />
   <meta property="og:site_name" content="wernull">
   <meta property="fb:admins" content="100001444981549">
