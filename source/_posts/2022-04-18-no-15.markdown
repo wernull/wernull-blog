@@ -30,7 +30,7 @@ The cabinet design was inspired from mid-century modern furniture. I wanted to m
 
 Many of the capacitors are vintage Aerovox that were tested to make sure they were still in spec. The tone circuit has vintage silver mica "domino" capacitors. Additional filtering was added to the rectifier to help reduce hum.
 
-The preamp tubes are vintage RCA 12au7 that were pulled from antique lab equipment. The same salvaged lab equipment provided the power switch and pilot light. 
+The preamp tubes are vintage RCA 12au7 that were pulled from antique lab equipment. The same salvaged lab equipment provided the power switch and pilot light. A friend traded me the 12" C-12-N Jensen speaker that came out of a Fender Hot Rod Deluxe. This is also the same model that was used in many Rhodes pianos. 
 
 One of the most time-consuming parts of this project was getting my woodworking skills to the level that I envisioned for the final product. Not only did I need to practice dove tails a handful of times, but I also had to fashion a leg vice from parts laying around the shop. 
 
@@ -41,4 +41,6 @@ The wood is black walnut and finished with [Walrus Oil](https://walrusoil.com/) 
 {% picture thumbnail 15/IMG_6916.jpg %}
 
 In the end this is one of my finest amps. It sounds amazing with both a piano and a guitar.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0C-NLNSYPG4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
