@@ -1,0 +1,54 @@
+---
+layout: post
+title: "No. 16 - Oiled Oak Dovetails 5B2"
+date: 2022-10-16 20:00:00 -0500
+categories: amps
+image: https://wernull.com/images/16/IMG_7620.jpg
+---
+
+{% picture thumbnail 16/IMG_7620.jpg %}
+{% picture thumbnail 16/IMG_7624.jpg %}
+{% picture thumbnail 16/IMG_7625.jpg %}
+{% picture thumbnail 16/IMG_7626.jpg %}
+{% picture thumbnail 16/IMG_7623.jpg %}
+{% picture thumbnail 16/IMG_7627.jpg %}
+
+After my [last build](/2022/04/no-15/) I really wanted to make something similar for myself using solid wood joined by dovetails. The main goal of the project was to replicate the cabinet, so I wanted to do a simple Fender circuit. My favorite circuit is the Fender Princeton so I searched for the oldest schematic I could find and choose the 5B2. This was for an early “wide panel” Fender Princeton from the 1950’s. The only modification to the circuit was to use a solid-state rectifier.
+
+{% picture thumbnail 16/IMG_7614.jpg class="left" %}
+
+The wood came from an old oak board I've been carrying around for twenty years. I used it to make some shelves and at one point used it for a step for the dog. There were many screw holes in the wood from mounting it as a shelf multiple times, but I was able to not only Tetris the pieces of the cabinet, but I was also able to line up the front edge of the design to show quarter sawn figure. There one screw hole I left on the bottom because I didn't want to make the amp any shorter, and it's a nice reminder of where the wood came from. 
+
+From there I designed the shape around a 6x9 speaker pulled from a 1970's Leslie organ speaker. The transformers and tubes had to be fit within the small space the cabinet allowed when a speaker was mounted. If you look closely, you can see the front has a slight slant. That was mainly to create the most space for the amp while fitting the sides from the board around screw holes.  
+
+Once the size was final, I could build the metal chassis. Again, this was sourced from scrap lying around the shop and the final design was guided by holes already in the material.
+
+{% picture thumbnail 16/IMG_7152.jpg %}
+{% picture thumbnail 16/IMG_7421.jpg %}
+{% picture thumbnail 16/IMG_7609.jpg %}
+
+For the chassis paint and decals, I did the process I've been doing my last handful of builds and feel good about. It starts with a powder coat of black. Then I use a vinyl cuter to cut out the labels and logo and apply them. After that I spray it with a clear powder coat and bake it at a lower temperature, so I don't melt the decals. This encapsulates the labels between layers of powder coat to make it very durable and professional looking.
+
+{% picture thumbnail 16/IMG_7538.jpg %}
+{% picture thumbnail 16/IMG_7607.jpg %}
+{% picture thumbnail 16/IMG_7613.jpg %}
+
+Once the painting is done, I could complete the electronics. With this simple circuit I was able to make things look really clean on the inside and practice making straight lines with the wire. The output transform was salvaged from a 1950's radio. It looks a little smaller than it needs to be but that is one reason it breaks up at higher volumes. 
+
+{% picture thumbnail 16/IMG_7577.jpg %}
+{% picture thumbnail 16/IMG_7612.jpg %}
+
+The grill cloth is from the same Leslie cabinet the 6x9" speaker came out of. 
+
+{% picture thumbnail 16/IMG_7539.jpg %}
+
+The wood is red oak and finished with [Walrus Oil](https://walrusoil.com/) furniture finish (three coats), butter, and wax. I kept adding coats of finish hoping to make the quarter sawn figure pop, but I think that caused it to be a little more orange than expected. 
+
+{% picture thumbnail 16/IMG_7611.jpg %}
+{% picture thumbnail 16/IMG_7616.jpg %}
+{% picture thumbnail 16/IMG_7618.jpg %}
+
+It has a sweet vintage Fender sound. Nice and clean at lower volumes and breaks up as expected when turned up all the way. The noise floor is pretty good at medium to low volumes but is noticeable at high levels.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dAODtdDmdWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

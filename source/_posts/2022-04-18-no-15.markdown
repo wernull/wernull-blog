@@ -3,6 +3,7 @@ layout: post
 title: "No. 15 - Wurlitzer Companion"
 date: 2022-04-07 20:00:00 -0500
 categories: amps
+image: https://wernull.com/images/15/IMG_6938.jpg
 ---
 
 {% picture thumbnail 15/IMG_6938.jpg %}

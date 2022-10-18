@@ -10,5 +10,14 @@ layout: default
       {% include article.html %}
     </article>
   {% endfor %}
+  <footer>
+    <p class="meta"> </p>
+    {% unless page.sharing == false %}
+        {% include post/sharing.html %}
+    {% endunless %}
+    <p class="meta">
+      <a class="basic-alignment left" href="{{site.posts[1].url}}" title="Previous Post: {{site.posts[1].title}}">&laquo; {{site.posts[1].title}}</a>
+    </p>
+  </footer>
 </div>
 
