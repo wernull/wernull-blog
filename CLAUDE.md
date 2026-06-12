@@ -8,19 +8,28 @@ Personal blog at [wernull.com](https://wernull.com) — tube amplifiers and tech
 
 ## Commands
 
-```bash
-# Dev server (http://localhost:4000)
-bundle exec jekyll serve
+Local development runs in **Docker** (see `Dockerfile` / `docker-compose.yml`).
+The container carries Ruby 3.1 + libvips so the host needs no native toolchain.
 
-# Production build (outputs to public/)
-JEKYLL_ENV=production bundle exec jekyll build
+```bash
+# Dev server (http://localhost:4000, live-reload on)
+docker compose up
+docker compose up --build      # rebuild image after changing the Gemfile
+
+# Production build (outputs to public/ on the host)
+docker compose run --rm -e JEKYLL_ENV=production jekyll bundle exec jekyll build
 
 # Create a new post
-rake new_post['Post Title']
+docker compose run --rm jekyll rake new_post['Post Title']
 
-# Deploy (build → S3 sync → CloudFront invalidation)
+# Deploy (Docker build → S3 sync → CloudFront invalidation)
 bash deploy.sh
 ```
+
+Any `jekyll`/`rake`/`bundle` command runs in the container via
+`docker compose run --rm jekyll <cmd>`. The project is bind-mounted, so file
+edits reload live; gems live in the image (rebuild after Gemfile changes).
+`Gemfile.lock` carries Linux platforms so bundler resolves inside the container.
 
 ## Architecture
 
@@ -50,4 +59,4 @@ Use `<!--more-->` as the excerpt separator. Posts support `{% picture %}` for re
 
 ## Deploy Details
 
-`deploy.sh` requires AWS CLI configured with profile `wernull`. It syncs to `s3://wernull.com` and invalidates two CloudFront distributions. The `image` frontmatter field is used as the OG/social share image and should be an absolute URL.
+`deploy.sh` builds the site in Docker (`JEKYLL_ENV=production`), then uses the host AWS CLI (profile `wernull`) to sync `public/` to `s3://wernull.com` and invalidate two CloudFront distributions. AWS credentials stay on the host and never enter the container. The `image` frontmatter field is used as the OG/social share image and should be an absolute URL.

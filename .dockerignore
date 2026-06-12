@@ -1,0 +1,12 @@
+# Build artifacts and local cruft — keep the build context small.
+# The project is bind-mounted at runtime, so this only affects `docker build`.
+.git
+public
+_site
+.jekyll-cache
+.jekyll-metadata
+.sass-cache
+vendor/bundle
+node_modules
+.DS_Store
+*.log

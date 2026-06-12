@@ -1,0 +1,14 @@
+services:
+  jekyll:
+    build: .
+    image: wernull-blog:dev
+    ports:
+      - "4000:4000"     # site -> http://localhost:4000
+      - "35729:35729"   # livereload
+    volumes:
+      # Bind-mount the project for live editing. Gems are baked into the
+      # image at /usr/local/bundle and are NOT shadowed by this mount.
+      - .:/srv/jekyll:cached
+    environment:
+      - JEKYLL_ENV=development
+    # Uses the CMD from the Dockerfile (jekyll serve --livereload --force_polling)

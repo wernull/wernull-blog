@@ -1,24 +1,53 @@
 ## Personal blog for Kyle Werner
 
-### Quick links
+Personal blog at [wernull.com](https://wernull.com) — tube amplifiers and tech.
+Built with Jekyll 4, hosted on AWS S3 + CloudFront.
 
-`rake new_post['title']`
+Local development runs in **Docker** so the native toolchain (Ruby + libvips
+for responsive images) doesn't need to be installed or maintained on the host.
 
-### Dev server
+### Dev server (Docker)
 
-`bundle exec jekyll serve`
+```bash
+docker compose up            # http://localhost:4000 (live-reload enabled)
+docker compose up --build    # rebuild the image after changing the Gemfile
+docker compose down          # stop
+```
+
+The project directory is bind-mounted, so edits to posts, styles, and layouts
+reload automatically.
+
+### New post
+
+```bash
+docker compose run --rm jekyll rake new_post['Post Title']
+```
+
+### Production build
+
+```bash
+docker compose run --rm -e JEKYLL_ENV=production jekyll bundle exec jekyll build
+```
+
+Output is written to `public/` on the host.
 
 ## Deploy
 
-`bash deploy.sh`
+```bash
+bash deploy.sh
+```
 
-### Build
+`deploy.sh` builds the site in Docker, then uses the host AWS CLI (profile
+`wernull`) to sync `public/` to `s3://wernull.com` and invalidate the two
+CloudFront distributions. AWS credentials stay on the host and never enter the
+container.
 
-`JEKYLL_ENV=production bundle exec jekyll build`
+---
 
-### Sync to S3
-aws s3 sync $HOME/documents/github/wernull-blog/public s3://wernull.com --profile wernull
+### Notes
 
-### Clear cloudfront cache
-aws cloudfront create-invalidation --distribution-id E166S0HG6YKT5Q --paths "/*" --profile wernull
-aws cloudfront create-invalidation --distribution-id E2NQH92HXEFZCN --paths "/*" --profile wernull
+- First `docker compose up` builds the image (installs Ruby gems + libvips);
+  subsequent runs are fast.
+- Ports: `4000` (site), `35729` (live-reload).
+- `Gemfile.lock` includes Linux platforms (`x86_64-linux`, `aarch64-linux`) so
+  bundler resolves correctly inside the container.
