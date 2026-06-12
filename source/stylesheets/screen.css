@@ -5,7 +5,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
    toolchain; mirrors source/_sass/custom/_styles.scss. */
 .featured-index .featured-post{display:flex;flex-direction:row;align-items:center;gap:1em;padding:1.25em 0}
 .featured-index .featured-post .featured-thumb{display:block;flex:0 0 96px}
-.featured-index .featured-post .featured-thumb img{display:block;margin:0;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px}
+.featured-index .featured-post .featured-thumb img{display:block;margin:0;width:100%;aspect-ratio:4/3;object-fit:contain;border-radius:6px}
 .featured-index .featured-post .featured-body{flex:1;min-width:0}
 .featured-index .featured-post .featured-title{margin:0 0 .3em;padding:0;background:none;font-size:1.1em;line-height:1.25}
 .featured-index .featured-post .featured-description{margin:0;line-height:1.4}
