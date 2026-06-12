@@ -1,2 +1,34 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+.featured-index {
+  .featured-post {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1.5em 0;
+
+    .featured-thumb {
+      display: block;
+      img { display: block; width: 100%; height: auto; margin: 0; }
+    }
+    .featured-title {
+      margin: 0 0 .5em;
+      padding: 0;
+      background: none;
+    }
+    .featured-description { margin: 0; }
+
+    @media only screen and (min-width: 768px) {
+      flex-direction: row;
+      align-items: flex-start;
+
+      .featured-thumb { flex: 0 0 240px; }
+      .featured-body { flex: 1; }
+    }
+  }
+
+  article + article.featured-post {
+    background: $img-border top left repeat-x;
+  }
+}

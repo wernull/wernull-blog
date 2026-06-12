@@ -4,6 +4,7 @@ title: "Getting Started with the Yahoo! Fantasy Sports API"
 date: 2016-01-01 20:35:47 -0500
 comments: true
 categories: tech
+hidden: true
 ---
 
 When I first started building my [fantasybots.com](http://fantasybots.com) service, there were many hurdles I ran across while learning to work with the Yahoo! Sports API. First off, the documentation is horrible and has actually gotten worse over the years. Also, it appears community relations with independent developers were abandoned back in 2010. The following are some tips on getting setup using Node and Express.

@@ -2,22 +2,17 @@
 layout: default
 ---
 
-<div class="blog-index">
-  {% assign index = true %}
-  {% for post in site.posts limit:1 %}
-  {% assign content = post.content %}
-    <article>
-      {% include article.html %}
-    </article>
+<div class="featured-index">
+  {% assign featured_posts = site.posts | where_exp: "p", "p.featured == true" %}
+  {% for post in featured_posts limit: 10 %}
+  <article class="featured-post">
+    <a class="featured-thumb" href="{{ root_url }}{{ post.url }}">
+      <img src="{{ post.image }}" alt="{{ post.title }}">
+    </a>
+    <div class="featured-body">
+      <h2 class="featured-title"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h2>
+      <p class="featured-description">{{ post.description }}</p>
+    </div>
+  </article>
   {% endfor %}
-  <footer>
-    <p class="meta"> </p>
-    {% unless page.sharing == false %}
-        {% include post/sharing.html %}
-    {% endunless %}
-    <p class="meta">
-      <a class="basic-alignment left" href="{{site.posts[1].url}}" title="Previous Post: {{site.posts[1].title}}">&laquo; {{site.posts[1].title}}</a>
-    </p>
-  </footer>
 </div>
-

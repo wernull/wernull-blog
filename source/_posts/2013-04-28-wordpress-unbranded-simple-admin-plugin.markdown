@@ -4,6 +4,7 @@ title: "WordPress Unbranded / Simple Admin Plugin"
 date: 2013-04-28 19:14:22 -0400
 comments: true
 categories: tech
+hidden: true
 ---
 
 WordPress makes a great CMS for clients on a budget. However, many of those clients don’t know and don’t need to know what WordPress is. This plugin is built to make the admin experience a little more personal for those who just need to log in and make a few copy changes.

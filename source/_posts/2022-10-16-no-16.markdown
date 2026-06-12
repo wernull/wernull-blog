@@ -4,6 +4,8 @@ title: "No. 16 - Oiled Oak Dovetails 5B2"
 date: 2022-10-16 20:00:00 -0500
 categories: amps
 image: https://wernull.com/images/16/IMG_7620.jpg
+featured: true
+description: "An early-1950s Fender Princeton 5B2 circuit in a dovetailed cabinet made from a twenty-year-old oak board, driving a 6x9 speaker pulled from a 1970s Leslie organ. The chassis was bent from scrap sheet metal and finished in layered powder coat with vinyl-cut decals."
 ---
 
 {% picture thumbnail 16/IMG_7620.jpg %}
