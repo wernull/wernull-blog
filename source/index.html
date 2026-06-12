@@ -3,8 +3,23 @@ layout: default
 ---
 
 <div class="featured-index">
+  {% comment %}
+    Featured posts sort by `feature_order` ascending (1 = first). Posts with the
+    same feature_order — or none set — fall back to date order (newest first).
+    site.posts is already newest-first, and where_exp preserves that order, so
+    grouping by each feature_order value gives date order within each group.
+  {% endcomment %}
   {% assign featured_posts = site.posts | where_exp: "p", "p.featured == true" %}
-  {% for post in featured_posts limit: 10 %}
+  {% assign ordered_posts = featured_posts | where_exp: "p", "p.feature_order != nil" %}
+  {% assign feature_orders = ordered_posts | map: "feature_order" | uniq | sort %}
+  {% assign sorted_featured = "" | split: "" %}
+  {% for order in feature_orders %}
+    {% assign order_group = featured_posts | where_exp: "p", "p.feature_order == order" %}
+    {% assign sorted_featured = sorted_featured | concat: order_group %}
+  {% endfor %}
+  {% assign unordered_posts = featured_posts | where_exp: "p", "p.feature_order == nil" %}
+  {% assign sorted_featured = sorted_featured | concat: unordered_posts %}
+  {% for post in sorted_featured limit: 10 %}
   <article class="featured-post">
     <a class="featured-thumb" href="{{ root_url }}{{ post.url }}">
       <img src="{{ post.image }}" alt="{{ post.title }}">

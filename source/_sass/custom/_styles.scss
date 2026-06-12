@@ -2,33 +2,65 @@
 // Add styles here to make changes without digging in too much
 
 .featured-index {
+  // Compact horizontal cards: image on the left, text on the right — at every
+  // breakpoint. Keeps the thumbnail small so the list reads cleanly on mobile.
   .featured-post {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     gap: 1em;
-    padding: 1.5em 0;
+    padding: 1.25em 0;
 
     .featured-thumb {
       display: block;
-      img { display: block; width: 100%; height: auto; margin: 0; }
+      flex: 0 0 96px;          // small, fixed thumbnail on mobile
+
+      img {
+        display: block;
+        margin: 0;
+        width: 100%;
+        aspect-ratio: 4 / 3;   // uniform crop regardless of source image
+        object-fit: cover;
+        border-radius: 6px;
+      }
+    }
+
+    .featured-body {
+      flex: 1;
+      min-width: 0;            // lets long titles wrap instead of overflowing
     }
     .featured-title {
-      margin: 0 0 .5em;
+      margin: 0 0 .3em;
       padding: 0;
       background: none;
+      font-size: 1.1em;
+      line-height: 1.25;
     }
-    .featured-description { margin: 0; }
+    .featured-description {
+      margin: 0;
+      line-height: 1.4;
+    }
 
     @media only screen and (min-width: 768px) {
-      flex-direction: row;
-      align-items: flex-start;
+      gap: 1.5em;
+      padding: 1.75em 0;
 
-      .featured-thumb { flex: 0 0 240px; }
-      .featured-body { flex: 1; }
+      .featured-thumb { flex: 0 0 200px; }   // a bit larger on wider screens
+      .featured-title { font-size: 1.4em; }
+    }
+
+    @media only screen and (max-width: 767px) {
+      // Image sits beside the title only; description wraps full-width below both.
+      align-items: flex-start;
+      flex-wrap: wrap;
+
+      .featured-body { display: contents; }
+      .featured-title { flex: 1 1 0; margin: 0; }
+      .featured-description { flex: 0 0 100%; margin-top: .5em; }
     }
   }
 
   article + article.featured-post {
-    background: $img-border top left repeat-x;
+    border-top: 1px solid #ededed;
   }
 }

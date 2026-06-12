@@ -37,7 +37,7 @@ edits reload live; gems live in the image (rebuild after Gemfile changes).
 - **Posts**: `source/_posts/YYYY-MM-DD-slug.markdown` with YAML frontmatter
 - **Layouts**: `source/_layouts/` — `default.html`, `post.html`, `page.html`
 - **Includes**: `source/_includes/` — `article.html` is the core post renderer; `post/` subdirectory has date, sharing, etc.
-- **Styles**: `source/_sass/` with subdirs `base/`, `custom/`, `partials/`, `plugins/`; compiled via `source/stylesheets/screen.scss`
+- **Styles**: The served stylesheet is a committed, pre-compiled static file at `source/stylesheets/screen.css` (edit it directly for style changes). The `source/_sass/` SCSS tree is Compass-based Octopress and is **not** compiled by the current toolchain — treat it as legacy/reference, not the source of truth.
 - **Custom plugins**: `source/_plugins/` — Ruby plugins for `image_tag`, `video_tag`, `blockquote`, `titlecase`, `config_tag`, `include_array`, `raw`
 - **Responsive images**: Configured via `source/_data/picture.yml`; use `{% picture %}` tag in posts
 
@@ -52,10 +52,14 @@ categories: amps   # or: tech
 image: https://wernull.com/images/16/filename.jpg
 comments: true     # optional, enables Disqus
 no_header: true    # optional, hides header image
+featured: true     # optional, shows on the home page featured list
+feature_order: 1   # optional, lower = higher on the home page; ties/unset fall back to date
 ---
 ```
 
 Use `<!--more-->` as the excerpt separator. Posts support `{% picture %}` for responsive images and `{% video_tag %}` for embedded video.
+
+The home page (`source/index.html`) lists posts with `featured: true`, sorted by `feature_order` ascending; posts with the same `feature_order` or none set fall back to date (newest first).
 
 ## Deploy Details
 
