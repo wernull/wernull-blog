@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "#15 - Wurlitzer Companion"
+title: "#15 - Wurlitzer Companion 5E5"
 date: 2022-04-07 20:00:00 -0500
 categories: amps
 image: https://wernull.com/images/15/IMG_6938.jpg
 featured: true
-feature_order: 1
+feature_order: 2
 description: "A tube amp built for a friend's restored Wurlitzer electric piano, based on the Fender Tweed Pro 5E5 with an ultra-linear output transformer and 12AU7 preamps for a cleaner sound. The black walnut cabinet was cut from a single board and joined with hand-cut dovetails, inspired by mid-century modern furniture."
 ---
 

@@ -1,0 +1,53 @@
+---
+layout: post
+title: "#12 - Lab Surplus AC4"
+date: 2019-04-14 20:00:00 -0500
+categories: amps
+image: https://wernull.com/images/12/amp12-front-angle.jpg
+featured: true
+feature_order: 1
+description: "A replica of the vintage Vox AC4 built almost entirely from upcycled lab equipment. The case and chassis from a Grass Instruments SD6 stimulator, parts and knobs from a W-P Instruments 302-T, and a vintage Triad power transformer. A hand-fabricated faceplate and grill, powder coated black, with a tremolo that finally behaves."
+---
+
+{% picture thumbnail 12/amp12-front-angle.jpg %}
+{% picture thumbnail 12/amp12-front.jpg %}
+{% picture thumbnail 12/amp12-back.jpg %}
+
+This one is called *Oscillator Redemption*. On my last build I never could get the tremolo to stop squealing, and I eventually gave up and converted it to an active effects loop instead. That defeat stuck with me, so for this build I wanted to make a small, simple circuit that focused on doing tremolo right. I went looking for the cleanest example I could find and landed on the original Vox AC4. This time I didn't stray too far from the schematic.
+
+{% picture thumbnail 12/amp12-schematic.jpg class="left" %}
+
+The AC4 is a wonderfully simple little amp, which is exactly what I wanted after fighting an oscillator for an entire build. I stuck with the classic tube lineup: a vintage Telefunken EF86 up front, a Sovtek 12AX7-LPS, a vintage Telefunken EZ80 rectifier, and a basic Groove Tubes EL84 doing the work in the output stage. The controls came out clean and minimal with volume and tone for the amp and a single speed knob for the tremolo.
+
+Almost everything on this amp except the faceplate was up-cycled from old lab equipment. I picked the donor gear up at a college surplus auction: a Grass Instruments SD6 stimulator and a W-P Instruments 302-T stimulator. These are old physiology lab units built to send precise electrical pulses into nerves and muscle, which means they were stuffed with exactly the kind of high-quality switches, terminal strips, and hardware I love to reuse.
+
+<div style="clear: both;"></div>
+{% picture thumbnail 12/amp12-donor-stimulator-2.jpg %}
+{% picture thumbnail 12/amp12-donor-unit-2.jpg %}
+{% picture thumbnail 12/amp12-donor-board.jpg %}
+
+The case and chassis are from the SD6, and the tube sockets and power switch were already mounted on it, which saved me a lot of work. The 302-T donated a pile of parts including terminal strips, capacitors, and the control knobs. I did try to use its precision pots, but they were only 10k and just wouldn't work for what I needed here, so I set those aside for another project.
+
+{% picture thumbnail 12/amp12-triad-transformer-2.jpg class="left" %}
+Power comes from a vintage Triad power transformer, which fit the small footprint and the era I was going for. It's a satisfying thing to build an amp where nearly every major piece had a previous life as something else entirely.
+
+The one part I made from scratch was the faceplate, and it ended up taking longer than the rest of the build because I was having too much fun with the metalwork. I cut and shaped it from sheet metal with a Dremel, along with the grill. The bend was the tricky part. I clamped the metal between blocks of wood to keep the line straight while I worked it. Once everything fit, I reused the SD6 chassis and powder coated the whole thing black.
+
+<div style="clear: both;"></div>
+{% picture thumbnail 12/amp12-faceplate-bend.jpg %}
+{% picture thumbnail 12/amp12-metalwork.jpg %}
+{% picture thumbnail 12/amp12-chassis-raw.jpg %}
+
+I also made a point of cleaning up my wiring on this build. After the last amp I wanted to straighten up my wiring game, and with a circuit this simple I finally had the room to make the inside look as tidy as the outside.
+
+{% picture thumbnail 12/amp12-wiring-1.jpg %}
+{% picture thumbnail 12/amp12-grille-badge.jpg %}
+{% picture thumbnail 12/amp12-tubes-glow.jpg %}
+
+This is just an amp head with no speaker built in  but it has all the chime and easy breakup the AC4 is known for. Best of all, the redemption worked: the tremolo finally behaves. The single speed control sweeps from a slow, lazy pulse up to a fast flutter, and it stays smooth and quiet the whole way. No squealing this time.
+
+Here's a short clip so you can hear the tremolo doing exactly what it refused to do last time:
+<div style="clear: both;"></div>
+<div style="text-align:center; margin:0 auto 1.5em;">
+<iframe width="315" height="560" style="max-width:100%;" src="https://www.youtube.com/embed/9TUJd9fyekw" title="Wernull #12 Oscillator Redemption — tremolo demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>

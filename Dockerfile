@@ -5,13 +5,15 @@
 FROM ruby:3.1-bookworm
 
 # System dependencies:
-#   libvips42      - native library for jekyll_picture_tag / ruby-vips
+#   libvips42      - native library for ruby-vips
+#   libvips-tools  - the `vips` CLI that jekyll_picture_tag shells out to
 #   build-essential, libffi-dev - to compile native gems (ffi, etc.)
 RUN apt-get update -qq \
  && apt-get install -y --no-install-recommends \
       build-essential \
       libffi-dev \
       libvips42 \
+      libvips-tools \
  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /srv/jekyll
