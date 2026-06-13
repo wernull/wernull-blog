@@ -1,0 +1,42 @@
+{% comment %}
+  NAM Capture Player embed.
+
+  Reads its config from the post's frontmatter (default key: nam_player) and emits a
+  container plus a JSON config block that source/javascripts/nam-player.js initializes.
+
+  Usage in a post:
+
+    ---
+    nam_player:
+      bpm: 120              # optional (default 120)
+      sections: 8           # optional (default 8)
+      bars_per_section: 4   # optional (default 4)
+      leadIn: 0             # optional; 0 = auto-detect AAC encoder priming
+      tracks:
+        - name: "1959 Tweed Bassman"
+          src: https://wernull.com/audio/amp16/bassman.m4a
+        - name: "Vox AC30 Top Boost"
+          src: https://wernull.com/audio/amp16/ac30.m4a
+    ---
+
+    {% include nam-player.html %}
+
+  For more than one player on a page, pass a different frontmatter key:
+    {% include nam-player.html key="nam_player_2" %}
+{% endcomment %}
+{% assign nam_key = include.key | default: 'nam_player' %}
+{% assign nam_cfg = page[nam_key] %}
+{% if nam_cfg and nam_cfg.tracks %}
+<div class="nam-player">
+  <script type="application/json" class="nam-player-config">{{ nam_cfg | jsonify }}</script>
+  <noscript>
+    <ul class="nam-fallback">
+      {% for track in nam_cfg.tracks %}
+      <li>{{ track.name }} — <a href="{{ track.src }}">audio</a></li>
+      {% endfor %}
+    </ul>
+  </noscript>
+</div>
+{% else %}
+<!-- nam-player: no `{{ nam_key }}` config found in this page's frontmatter -->
+{% endif %}

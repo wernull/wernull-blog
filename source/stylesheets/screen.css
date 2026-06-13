@@ -37,3 +37,42 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
   .featured-index .featured-post .featured-title { flex: 1 1 0; margin: 0; }
   .featured-index .featured-post .featured-description { flex: 0 0 100%; margin-top: .5em; }
 }
+
+/* --- NAM Capture Player ---------------------------------------------------
+   Interactive A/B looper embedded in posts via {% include nam-player.html %}.
+   Appended here because _sass/ is not compiled by the current toolchain. */
+.nam-player{font-family:"Open Sans","Helvetica Neue",Arial,sans-serif;color:#414d59;margin:0 0 1.8em;border:1px solid #e6e6e6;border-radius:.5em;background:#fafafa;padding:.9em 1em}
+.nam-transport{display:flex;align-items:center;gap:1em;flex-wrap:wrap;margin-bottom:.8em}
+.nam-play{font-family:inherit;font-size:.95em;line-height:1;cursor:pointer;border:0;border-radius:.35em;padding:.55em 1em;background:#759bc0;color:#fff;transition:background .2s}
+.nam-play:hover{background:#5f88b3}
+.nam-play.is-playing{background:#4c5a68}
+.nam-readout{font-size:.85em;color:#8a9aa9;text-transform:uppercase;letter-spacing:.03em}
+.nam-vol{display:flex;align-items:center;gap:.4em;margin-left:auto;font-size:.8em;color:#8a9aa9;text-transform:uppercase}
+.nam-vol input{width:90px}
+.nam-table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.nam-table{border-collapse:separate;border-spacing:0;width:100%;margin:0}
+.nam-table th,.nam-table td{border:1px solid #e2e2e2;padding:0;text-align:center;vertical-align:middle}
+.nam-corner{background:#f0f0f0;font-size:.8em;color:#8a9aa9;padding:.4em .7em;text-align:left}
+.nam-sec-head{background:#f0f0f0;min-width:2.4em}
+.nam-sec-head label{display:flex;flex-direction:column;align-items:center;gap:.15em;cursor:pointer;padding:.4em .35em}
+.nam-sec-head input{margin:0}
+.nam-sec-num{font-size:.8em;color:#667481;font-weight:bold}
+.nam-track-head{text-align:left;white-space:nowrap;background:#fff}
+.nam-track-head label{display:flex;align-items:center;gap:.5em;cursor:pointer;padding:.5em .7em}
+.nam-track-name{font-size:.9em}
+.nam-row.is-selected{background:#eef3f8}
+.nam-row.is-selected .nam-track-head{background:#e3edf6}
+.nam-row.is-selected .nam-track-name{font-weight:bold;color:#34506b}
+.nam-cell{position:relative;min-width:2.4em;height:2.2em;background:#fff;overflow:hidden}
+.nam-row.is-selected .nam-cell{background:#f6f9fc}
+.nam-cell.is-off{background:#f3f3f3;opacity:.45}
+.nam-cell-fill{position:absolute;left:0;top:0;bottom:0;width:0;background:rgba(117,155,192,.35);transition:width .05s linear}
+.nam-cell.is-active{box-shadow:inset 0 0 0 2px #759bc0}
+.nam-cell.is-active .nam-cell-fill{background:rgba(117,155,192,.55)}
+.nam-status{min-height:1.2em;margin-top:.6em;font-size:.82em;color:#a05050}
+.nam-fallback{margin:0;font-size:.9em}
+@media only screen and (max-width:600px){
+  .nam-player{padding:.7em}
+  .nam-vol{margin-left:0;flex:0 0 100%}
+  .nam-track-name{max-width:9em;overflow:hidden;text-overflow:ellipsis}
+}

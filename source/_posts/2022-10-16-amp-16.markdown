@@ -6,6 +6,20 @@ categories: amps
 image: https://wernull.com/images/16/IMG_7620.jpg
 featured: true
 description: "An early-1950s Fender Princeton 5B2 circuit in a dovetailed cabinet made from a twenty-year-old oak board, driving a 6x9 speaker pulled from a 1970s Leslie organ. The chassis was bent from scrap sheet metal and finished in layered powder coat with vinyl-cut decals."
+# NAM Capture Player — one 120 BPM / 8-section solo-guitar take reamped through each
+# model. Replace the src URLs once the .m4a files are produced and uploaded to S3.
+nam_player:
+  bpm: 120
+  sections: 8
+  bars_per_section: 4
+  leadIn: 0            # 0 = auto-detect AAC encoder priming
+  tracks:
+    - name: "Princeton 5B2 — clean"
+      src: https://wernull.com/audio/amp16/5b2-clean.m4a
+    - name: "Princeton 5B2 — edge"
+      src: https://wernull.com/audio/amp16/5b2-edge.m4a
+    - name: "Princeton 5B2 — cranked"
+      src: https://wernull.com/audio/amp16/5b2-cranked.m4a
 ---
 
 {% picture thumbnail 16/IMG_7620.jpg %}
@@ -51,6 +65,10 @@ The wood is red oak and finished with [Walrus Oil](https://walrusoil.com/) furni
 {% picture thumbnail 16/IMG_7618.jpg %}
 
 It has a sweet vintage Fender sound. Nice and clean at lower volumes and breaks up as expected when turned up all the way. The noise floor is pretty good at medium to low volumes but is noticeable at high levels.
+
+I captured a few NAM models of the amp at different settings. Pick a capture and toggle the sections to loop the part that interests you — it stays on beat as you switch.
+
+{% include nam-player.html %}
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dAODtdDmdWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

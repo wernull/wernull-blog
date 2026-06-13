@@ -44,6 +44,50 @@ container.
 
 ---
 
+## NAM Capture Player
+
+An interactive A/B looper for auditioning the same guitar performance reamped through multiple NAM (Neural Amp Modeler) captures. Readers pick a track (radio button), toggle which of 8 sections loop (checkboxes), and the player stays **on-beat and seamless** as they switch.
+
+### Playback engine
+
+Uses the Web Audio API (not HTML5 `<audio>`) to guarantee **gapless looping + sample-accurate section skipping**. Decodes `.m4a` files to `AudioBuffer`, schedules one 8-second section at a time with a lookahead scheduler, and applies changes at the next downbeat so they're never mid-section or mid-fade.
+
+### Recording & producing audio files
+
+1. Record one DI (clean direct signal) at **120 BPM, 4/4** with a click, arranged as **8 distinct 4-bar sections** (128 beats = 64 seconds total). Land on a clean onset/root at each section boundary so skips don't chop a ringing note.
+2. Edit the DI region to start exactly at bar 1, beat 1 (sample 0); trim to exactly 64.000 seconds.
+3. Reamp that same DI through each NAM model in your DAW (offline render), which guarantees all captures are sample-aligned and exactly 64 seconds.
+4. Level-match the renders (e.g. normalize to ~−16 LUFS) so switching tracks doesn't jump in volume.
+5. Export each at 44.1 kHz, encode to **AAC `.m4a` (~160 kbps)** for size + universal browser support.
+6. Upload to S3/CloudFront, e.g. `https://wernull.com/audio/amp12/model-name.m4a`.
+
+### Embedding in a post
+
+Add `nam_player` config to the post's frontmatter:
+
+```yaml
+nam_player:
+  bpm: 120                    # optional (default 120)
+  sections: 8                 # optional (default 8)
+  bars_per_section: 4         # optional (default 4)
+  leadIn: 0                   # optional; 0 = auto-detect AAC encoder priming
+  tracks:
+    - name: "Model Name 1"
+      src: https://wernull.com/audio/ampNN/model1.m4a
+    - name: "Model Name 2"
+      src: https://wernull.com/audio/ampNN/model2.m4a
+```
+
+Then embed the player in the post body:
+
+```liquid
+{% include nam-player.html %}
+```
+
+For multiple players on one page, pass a different frontmatter key: `{% include nam-player.html key="nam_player_2" %}`.
+
+---
+
 ### Notes
 
 - First `docker compose up` builds the image (installs Ruby gems + libvips);
