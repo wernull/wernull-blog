@@ -31,13 +31,13 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
   .featured-index, .featured-index .featured-post .featured-body { min-width: 0; max-width: 100%; }
   .featured-index .featured-post .featured-title,
   .featured-index .featured-post .featured-description { word-wrap: break-word; overflow-wrap: anywhere; }
-  /* Mobile: image sits beside the title (and the Tone3000 badge tucked under
-     it); the description wraps full-width below both. */
+  /* Mobile: image sits beside the title only; the description and Tone3000
+     badge wrap full-width below both. */
   .featured-index .featured-post { align-items: flex-start; flex-wrap: wrap; }
   .featured-index .featured-post .featured-body { display: contents; }
-  .featured-index .featured-post .featured-head { flex: 1 1 0; min-width: 0; margin: 0; }
-  .featured-index .featured-post .featured-title { margin: 0; }
+  .featured-index .featured-post .featured-title { flex: 1 1 0; margin: 0; }
   .featured-index .featured-post .featured-description { flex: 0 0 100%; margin-top: .5em; }
+  .featured-index .featured-post .featured-tone { flex: 0 0 100%; }
 }
 
 /* Tone3000 call-to-action — outbound card on a post (Tone3000 has no official
@@ -57,7 +57,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 /* Home page featured card — Tone3000 badge tucked under the title (inside
    .featured-head). The wrapping paragraph holds the pill, which sizes to its
    content so it never stretches full-width or clips on mobile. */
-.featured-index .featured-tone{margin:.45em 0 0}
+.featured-index .featured-tone{margin:.7em 0 0}
 .featured-index .t3k-badge{display:inline-flex;align-items:center;gap:.4em;padding:.32em .85em;background:#2563eb;color:#fff;font-family:"Open Sans","Helvetica Neue",Arial,sans-serif;font-size:.8em;font-weight:700;line-height:1;text-decoration:none;border-radius:999px;transition:background-color .25s}
 .featured-index .t3k-badge:visited{color:#fff}
 .featured-index .t3k-badge:hover,.featured-index .t3k-badge:focus{background:#1d4ed8;color:#fff}
