@@ -31,9 +31,33 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
   .featured-index, .featured-index .featured-post .featured-body { min-width: 0; max-width: 100%; }
   .featured-index .featured-post .featured-title,
   .featured-index .featured-post .featured-description { word-wrap: break-word; overflow-wrap: anywhere; }
-  /* Mobile: image sits beside the title only; the description wraps full-width below both. */
+  /* Mobile: image sits beside the title (and the Tone3000 badge tucked under
+     it); the description wraps full-width below both. */
   .featured-index .featured-post { align-items: flex-start; flex-wrap: wrap; }
   .featured-index .featured-post .featured-body { display: contents; }
-  .featured-index .featured-post .featured-title { flex: 1 1 0; margin: 0; }
+  .featured-index .featured-post .featured-head { flex: 1 1 0; min-width: 0; margin: 0; }
+  .featured-index .featured-post .featured-title { margin: 0; }
   .featured-index .featured-post .featured-description { flex: 0 0 100%; margin-top: .5em; }
 }
+
+/* Tone3000 call-to-action — outbound card on a post (Tone3000 has no official
+   no-code embed yet), driven by the `tone3000:` frontmatter attribute. Uses
+   Tone3000's brand look: near-black panel with their vivid blue (#2563eb) accent. */
+.t3k-card{box-sizing:border-box;max-width:100%;display:flex;align-items:center;gap:1em;margin:0 0 2em;padding:1.1em 1.25em;background:#0d0d10;border:1px solid #1f1f24;border-left:4px solid #2563eb;border-radius:8px}
+.t3k-card *{box-sizing:border-box}
+.t3k-card .t3k-icon{flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:#17171b;color:#3b82f6}
+.t3k-card .t3k-body{flex:1;min-width:0}
+.t3k-card .t3k-label{margin:0;font-family:"Open Sans","Helvetica Neue",Arial,sans-serif;font-weight:700;font-size:1em;line-height:1.3;color:#fff}
+.t3k-card .t3k-sub{margin:.2em 0 0;font-size:.85em;line-height:1.4;color:#9a9aa3}
+.t3k-card .t3k-btn{flex:0 0 auto;display:inline-block;padding:.55em 1.1em;background:#2563eb;color:#fff;font-family:"Open Sans","Helvetica Neue",Arial,sans-serif;font-size:.9em;font-weight:700;text-decoration:none;border-radius:6px;white-space:nowrap;transition:background-color .25s}
+.t3k-card .t3k-btn:visited{color:#fff}
+.t3k-card .t3k-btn:hover,.t3k-card .t3k-btn:focus{background:#1d4ed8;color:#fff}
+@media only screen and (max-width:600px){.t3k-card{flex-wrap:wrap;gap:.75em}.t3k-card .t3k-btn{flex:0 0 100%;text-align:center}}
+
+/* Home page featured card — Tone3000 badge tucked under the title (inside
+   .featured-head). The wrapping paragraph holds the pill, which sizes to its
+   content so it never stretches full-width or clips on mobile. */
+.featured-index .featured-tone{margin:.45em 0 0}
+.featured-index .t3k-badge{display:inline-flex;align-items:center;gap:.4em;padding:.32em .85em;background:#2563eb;color:#fff;font-family:"Open Sans","Helvetica Neue",Arial,sans-serif;font-size:.8em;font-weight:700;line-height:1;text-decoration:none;border-radius:999px;transition:background-color .25s}
+.featured-index .t3k-badge:visited{color:#fff}
+.featured-index .t3k-badge:hover,.featured-index .t3k-badge:focus{background:#1d4ed8;color:#fff}

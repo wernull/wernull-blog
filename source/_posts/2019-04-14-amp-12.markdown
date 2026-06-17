@@ -6,6 +6,7 @@ categories: amps
 image: https://wernull.com/images/12/amp12-front-angle.jpg
 featured: true
 feature_order: 1
+tone3000: https://www.tone3000.com/tones/wernull-12-ac4-head-2019-71907
 description: "A replica of the vintage Vox AC4 built almost entirely from upcycled lab equipment. The case and chassis from a Grass Instruments SD6 stimulator, parts and knobs from a W-P Instruments 302-T, and a vintage Triad power transformer. A hand-fabricated faceplate and grill, powder coated black, with a tremolo that finally behaves."
 ---
 
