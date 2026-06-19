@@ -3,14 +3,14 @@ layout: post
 title: "#18 - The Sleeper Princeton"
 date: 2025-06-28 20:00:00 -0500
 categories: amps
-image: https://wernull.com/images/18/amp18-front-close.jpg
+image: https://wernull.com/images/18/amp18-front-center.jpg
 featured: true
 feature_order: 1
 description: "A Fender 5E2 Princeton reworked around two unlikely little tube, a 6J6 preamp and a 6AQ5A output. With a solid-state rectifier they push nearly the 3 watts of the original 6V6. Vintage Stancor and salvaged-radio iron, silver-mica 'domino' caps, a powder-coated chassis, and an oak cabinet dyed black with Japanese Sumi ink, spline-mitered and finished in tung oil."
 ---
 
+{% picture thumbnail 18/amp18-front-center.jpg %}
 {% picture thumbnail 18/amp18-front-close.jpg %}
-{% picture thumbnail 18/amp18-front.jpg %}
 {% picture thumbnail 18/amp18-back.jpg %}
 
 This one is called *The Sleeper*. I wanted to challenge myself by building an amp around obscure tubes instead of the usual suspects, so I went looking for little bottles that put out more than they have any right to. I landed on a 6J6 in the preamp and a 6AQ5A in the output. They're small tubes, but they punch well above their size, and the all-black box ended up hiding exactly how much amp is packed inside.
