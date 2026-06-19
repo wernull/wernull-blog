@@ -1,0 +1,62 @@
+---
+layout: post
+title: "#18 - The Sleeper Princeton"
+date: 2025-06-28 20:00:00 -0500
+categories: amps
+image: https://wernull.com/images/18/amp18-front-close.jpg
+featured: true
+feature_order: 1
+description: "A Fender 5E2 Princeton reworked around two unlikely little tube, a 6J6 preamp and a 6AQ5A output. With a solid-state rectifier they push nearly the 3 watts of the original 6V6. Vintage Stancor and salvaged-radio iron, silver-mica 'domino' caps, a powder-coated chassis, and an oak cabinet dyed black with Japanese Sumi ink, spline-mitered and finished in tung oil."
+---
+
+{% picture thumbnail 18/amp18-front-close.jpg %}
+{% picture thumbnail 18/amp18-front.jpg %}
+{% picture thumbnail 18/amp18-back.jpg %}
+
+This one is called *The Sleeper*. I wanted to challenge myself by building an amp around obscure tubes instead of the usual suspects, so I went looking for little bottles that put out more than they have any right to. I landed on a 6J6 in the preamp and a 6AQ5A in the output. They're small tubes, but they punch well above their size, and the all-black box ended up hiding exactly how much amp is packed inside.
+
+{% picture thumbnail 18/amp18-schematic.jpg class="left" %}
+
+The circuit started life as a Fender 5E2 Princeton, but it got heavily modified to live around the tubes I picked. The 6J6 dual triode handles the preamp, the 6AQ5A does the work in the output stage, and I swapped the tube rectifier for a solid-state one. The controls stayed simple and true to the original with a volume and a tone, plus a 4Ω output around back since this is a head. The little silver mica "domino" caps in the tone circuit are vintage too, which felt right for the era I was chasing.
+
+<div style="clear: both;"></div>
+{% picture thumbnail 18/amp18-tube-measure.jpg class="left" %}
+The whole point of this build was to lean on tubes that overdeliver, and these two do. Even though the 6AQ5A is a fraction of the size of a 6V6, the amp produces almost as much output as the original Princeton design at right around 3 watts. It's a satisfying party trick to hand someone a box this small and have it keep up with a full-size amp.
+
+<div style="clear: both;"></div>
+{% picture thumbnail 18/amp18-power-transformer.jpg class="left" %}
+Power comes from a vintage Stancor power transformer, and the output transformer was pulled from an old vintage radio. The hardest part of the whole layout was the power transformer. I wanted to pack everything into the smallest package I could, and that Stancor kept getting in the way of every plan I drew up. I shuffled the parts around more times than I'd like to admit before it all finally fit.
+
+<div style="clear: both;"></div>
+{% picture thumbnail 18/amp18-layout-mockup.jpg %}
+{% picture thumbnail 18/amp18-chassis-assembled.jpg %}
+{% picture thumbnail 18/amp18-chassis-assembled-2.jpg %}
+
+{% picture thumbnail 18/amp18-chassis-raw.jpg class="left" %}
+The chassis and faceplate started as bare aluminum and a notebook full of hole layouts. Once everything was drilled and fit, I powder coated the whole chassis black, applied the vinyl labels for the controls and the WERNULL mark, and then sealed those labels in under a clear matte powder coat so they're baked into the finish instead of sitting on top of it.
+
+<div style="clear: both;"></div>
+{% picture thumbnail 18/amp18-faceplate.jpg %}
+
+{% picture thumbnail 18/amp18-cabinet-miters.jpg class="left" %}
+The cabinet is oak, and honestly the board I had didn't have much character on its own, so I treated it as a chance to try some new woodworking. I joined the corners with miters strengthened by splines, which meant cutting clean 45s. So I built a new shooting board just for this and trued up each miter by hand with a plane. It was slow, but the joints came out crisp and the splines add a nice bit of strength and detail at every corner.
+
+<div style="clear: both;"></div>
+{% picture thumbnail 18/amp18-cabinet-splines.jpg %}
+{% picture thumbnail 18/amp18-cabinet-fit.jpg %}
+{% picture thumbnail 18/amp18-cabinet-dyed.jpg %}
+
+To give the plain oak some drama I dyed it black with Japanese Sumi ink, which soaks into the grain and leaves the texture showing through instead of burying it like paint would. From there it got tung oil and a buff of wax, which warmed the black up and gave it a soft, hand-rubbed sheen.
+
+The one mechanical headache was the power tube. The 6AQ5A stood a little taller than I wanted poking out of the chassis, so I made a bracket to drop it down lower into the box and keep the silhouette tidy. With everything that small and packed that tight, I took my time on the wiring to keep it clean inside.
+
+{% picture thumbnail 18/amp18-build-bench.jpg %}
+{% picture thumbnail 18/amp18-wiring.jpg %}
+
+In the end *The Sleeper* did exactly what I set out to do. It looks like an unassuming little black box, but those two obscure tubes keep it right on the heels of the 6V6 Princeton it grew out of. Sometimes the fun is in the parts nobody reaches for first.
+
+<div style="clear: both;"></div>
+{% picture thumbnail 18/amp18-detail-badge.jpg %}
+{% picture thumbnail 18/amp18-tube-glow.jpg %}
+<div style="text-align:center; margin:0 auto 1.5em;">
+</div>
