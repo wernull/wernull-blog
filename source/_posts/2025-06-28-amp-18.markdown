@@ -5,7 +5,8 @@ date: 2025-06-28 20:00:00 -0500
 categories: amps
 image: https://wernull.com/images/18/amp18-front-center.jpg
 featured: true
-feature_order: 1
+feature_order: 3
+tone3000: https://www.tone3000.com/tones/wernull-18-6j6-6aq5a-2025-72398
 description: "A Fender 5E2 Princeton reworked around two unlikely little tube, a 6J6 preamp and a 6AQ5A output. With a solid-state rectifier they push nearly the 3 watts of the original 6V6. Vintage Stancor and salvaged-radio iron, silver-mica 'domino' caps, a powder-coated chassis, and an oak cabinet dyed black with Japanese Sumi ink, spline-mitered and finished in tung oil."
 ---
 
@@ -59,4 +60,9 @@ In the end *The Sleeper* did exactly what I set out to do. It looks like an unas
 {% picture thumbnail 18/amp18-detail-badge.jpg %}
 {% picture thumbnail 18/amp18-tube-glow.jpg %}
 <div style="text-align:center; margin:0 auto 1.5em;">
+</div>
+
+<div style="clear: both;"></div>
+<div style="text-align:center; margin:0 auto 1.5em;">
+<iframe width="315" height="560" style="max-width:100%;" src="https://www.youtube.com/embed/X05IXfdNu6U" title="Wernull #18 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>

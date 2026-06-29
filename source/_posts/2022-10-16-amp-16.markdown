@@ -5,6 +5,8 @@ date: 2022-10-16 20:00:00 -0500
 categories: amps
 image: https://wernull.com/images/16/IMG_7620.jpg
 featured: true
+feature_order: 2
+tone3000: https://www.tone3000.com/tones/wernull-16-5b2-head-2022-72992
 description: "An early-1950s Fender Princeton 5B2 circuit in a dovetailed cabinet made from a twenty-year-old oak board, driving a 6x9 speaker pulled from a 1970s Leslie organ. The chassis was bent from scrap sheet metal and finished in layered powder coat with vinyl-cut decals."
 ---
 
@@ -21,7 +23,7 @@ After my [last build](/2022/04/no-15/) I really wanted to make something similar
 
 The wood came from an old oak board I've been carrying around for twenty years. I used it to make some shelves and at one point used it for a step for the dog. There were many screw holes in the wood from mounting it as a shelf multiple times, but I was able to not only Tetris the pieces of the cabinet, but I was also able to line up the front edge of the design to show quarter sawn figure. There one screw hole I left on the bottom because I didn't want to make the amp any shorter, and it's a nice reminder of where the wood came from. 
 
-From there I designed the shape around a 6x9 speaker pulled from a 1970's Leslie organ speaker. The transformers and tubes had to be fit within the small space the cabinet allowed when a speaker was mounted. If you look closely, you can see the front has a slight slant. That was mainly to create the most space for the amp while fitting the sides from the board around screw holes.  
+From there I designed the shape around a 6x9 speaker pulled from a late 1970's X77 Leslie organ cabinet. It's a Utah brand from 1978 with a ceramic-magnet. The transformers and tubes had to be fit within the small space the cabinet allowed when a speaker was mounted. If you look closely, you can see the front has a slight slant. That was mainly to create the most space for the amp while fitting the sides from the board around screw holes.  
 
 Once the size was final, I could build the metal chassis. Again, this was sourced from scrap lying around the shop and the final design was guided by holes already in the material.
 
