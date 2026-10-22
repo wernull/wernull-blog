@@ -1,0 +1,55 @@
+---
+layout: post
+title: "#13 - Stereo Hybrid Leslie"
+date: 2020-05-20 20:00:00 -0500
+categories: amps
+image: https://wernull.com/images/13/amp13-front.jpg
+featured: true
+feature_order: 3
+tone3000: https://www.tone3000.com/tones/wernull-13-leslie-hybrid-head-2020-78037
+description: "Built to hear the stereo panning vibrato of my restored Yamaha CP-70B. Two Fender Princeton 5F2-A tube preamps feed two solid-state power amps and matching RCA 2N3055s pulled from a Hammond Leslie X77, all stuffed into an upcycled lab-equipment case with a faceplate cut from an old laser."
+---
+
+{% picture thumbnail 13/amp13-front-angle.jpg %}
+{% picture thumbnail 13/amp13-front.jpg %}
+{% picture thumbnail 13/amp13-back-2.jpg %}
+
+I had just finished restoring a Yamaha CP-70B electric grand, and its panning vibrato is a unique feature, but I had no good way to actually hear it in stereo. I wanted an amp that could do both channels justice, so I set out to build one from the parts of some old gear I had lying around.
+
+{% picture thumbnail 13/amp13-cp70-2.jpg class="left" %}
+The whole point was two channels working in lockstep, so I designed it around a stereo signal path from the very start. Getting a piano's stereo vibrato to bloom left and right in the room is the entire reason this thing exists.
+<div style="clear: both;"></div>
+
+For the preamp and tone circuit I went with the Fender Princeton 5F2-A circuit. A simple, sweet-sounding little circuit I trust and built one for each channel with a 12AX7 doing the work. Because everything has to move together in stereo, the gain, tone, and volume controls all had to be dual-gang pots so a single knob adjusts both channels at once.
+<div style="clear: both;"></div>
+
+{% picture thumbnail 13/amp13-tubes-glow.jpg %}
+{% picture thumbnail 13/amp13-schematic-princeton.jpg %}
+{% picture thumbnail 13/amp13-schematic-leslie.jpg %}
+
+The power amps are the real donor story. I pulled them straight out of a Hammond organ's Leslie X77 speaker, along with the RCA 2N3055 transistors that drive them. The 2N3055s came as a matched set, which mattered for keeping the two channels even. Best of all, the original Leslie X77 power transformer had an extra 200V secondary that was originally used to power the space effect which was the right voltage for the 12ax7 preamp. One transformer ended up powering both the solid-state and the tube halves of the amp, which felt like the parts were meant to end up together.
+<div style="clear: both;"></div>
+
+{% picture thumbnail 13/amp13-transformer.jpg %}
+{% picture thumbnail 13/amp13-case.jpg %}
+{% picture thumbnail 13/amp13-preamp-mockup.jpg %}
+
+The case was upcycled from a piece of lab equipment and since it tips the scale at over 18 pounds, I added the two handles on top to make it something you could actually carry. Cramming a stereo tube preamp, a pair of solid-state power amps, a big transformer, and all the filtering caps into that box was a real game if tetris.
+
+{% picture thumbnail 13/amp13-cardboard-prototype-2.jpg class="left" %}
+{% picture thumbnail 13/amp13-faceplate-panel.jpg class="left" %}
+The faceplate is my favorite part. I cut it from scrap metal off a 6-foot laser I picked up at an auction. I never did get that laser running, but it was packed with good parts and beautiful scrap metal, so it lived on in pieces. Before I cut any metal I prototyped the whole front-panel layout in cardboard to get the spacing and feel right.
+<div style="clear: both;"></div>
+
+I cut the main logo off the old laser and mounted it on the inside of the amp as a little keepsake for myself so I'd always remember where the metal came from. Nobody else will ever see it, and that's kind of the point. The back is the original Leslie panel cut to fix and showcasing the louvers for ventilation. Two transistor mounts were original and the other two cut to fix next to them. 
+
+{% picture thumbnail 13/amp13-laser-logo.jpg %}
+{% picture thumbnail 13/amp13-internals.jpg %}
+{% picture thumbnail 13/amp13-metalwork.jpg %}
+
+{% picture thumbnail 13/amp13-case-open.jpg class="left" %}
+Because there is a lot of hardware packed into a small box, I added a small fan on the back louvers to keep air moving. Fan noise can be a problem for a quiet piano session so I put it on a switch that allows you to shut it off when you need silence and turn it back on when things heat up.
+<div style="clear: both;"></div>
+
+{% picture thumbnail 13/amp13-badge.jpg class="left" %}
+The CP-70B's stereo vibrato comes through wide and lush, sweeping across the two channels the way it was always meant to. A pile of dead gear, a Hammond Leslie, a broken laser, and some old lab equipment got a second life as one amp that finally lets me hear that piano the way it deserves.
